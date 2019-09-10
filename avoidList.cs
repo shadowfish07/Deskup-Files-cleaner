@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace 桌面文件清理
 {
@@ -26,7 +27,14 @@ namespace 桌面文件清理
             {
                 Data.AvoidList[i] = textBox1.Lines[i];
             }
-            
+            using (StreamWriter sw = new StreamWriter ("avoidList.txt"))
+            {
+                int i = 0;
+                while (Data.AvoidList [i]!= null)
+                {
+                    sw.WriteLine(Data.AvoidList[i++]);
+                }
+            }
         }
         public static  bool CheckAovidList(string path)
         {

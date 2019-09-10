@@ -21,7 +21,30 @@ namespace 桌面文件清理
             txt_video_directory.Text = Data.video_Directory;
             txt_zip_directory.Text = Data.zip_Directory;
             ReadFiles(Data.deskup_Directory);
+            ReadRes();
         }
+
+        private void ReadRes()
+        {
+            if(File .Exists ("avoidList.txt"))
+            {
+                using (StreamReader sr = new StreamReader ("avoidList.txt"))
+                {
+                    string line;
+                    int i=0;
+                    while ((line = sr.ReadLine() )!= null )
+                    {
+                        Data.AvoidList[i++] += line;
+                    }
+                }
+
+            }
+            else
+            {
+                File.Create("avoidList.txt");
+            }
+        }
+
         private void  ReadFiles(string  directory)
         {
 

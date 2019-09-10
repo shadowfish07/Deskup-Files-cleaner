@@ -121,9 +121,8 @@
             this.lbl_pic_num.AutoSize = true;
             this.lbl_pic_num.Location = new System.Drawing.Point(11, 13);
             this.lbl_pic_num.Name = "lbl_pic_num";
-            this.lbl_pic_num.Size = new System.Drawing.Size(69, 20);
+            this.lbl_pic_num.Size = new System.Drawing.Size(0, 20);
             this.lbl_pic_num.TabIndex = 8;
-            this.lbl_pic_num.Text = "图片共个";
             // 
             // lbl_video_num
             // 
