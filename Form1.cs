@@ -154,7 +154,7 @@ namespace 桌面文件清理
                 
             }
             MessageBox.Show("整理完成");
-            System.Environment.Exit(0);
+            Application.Exit();
         }
 
         private void Txt_picture_directory_TextChanged(object sender, EventArgs e)
